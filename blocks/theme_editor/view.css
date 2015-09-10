@@ -1,0 +1,164 @@
+/* -- Container -- */
+#theme-editor-wrapper {
+	position: fixed;
+	left: -232px;
+	top: 10%;
+	transition:.5s;
+	opacity: 0;
+	z-index: 9999;
+}
+#theme-editor-wrapper #theme-editor * {
+	font-family:  Helvetica, Arial, Sans-Serif;
+}
+#theme-editor-wrapper.open {
+	left: 0;
+}
+#theme-editor-wrapper.loaded {
+	opacity: 1;
+}
+#theme-editor {
+	width: 232px;
+	background-color: #fff;
+	padding: 40px;
+	border: 1px solid #ccc;
+}
+#theme-editor .col {
+	float: left; 
+	width: 30px;
+	margin-right: 5px;
+}
+
+/* -- Lichette -- */
+
+#theme-editor .handle {
+	position: absolute;
+	bottom: 0;
+	right: -30px;
+	background: #555;
+	width: 30px;height: 150px;
+	text-align: center;
+
+}
+#theme-editor .handle i {
+	color: #efefef;
+	font-family: FontAwesome !important;
+}
+#theme-editor .hint--top:before, 
+#theme-editor .hint--top:after {
+	left: 8px;
+}
+
+
+
+/* -- Text -- */
+#theme-editor p {
+	font-size: 16px;
+	
+	font-weight: lighter;
+	color: #555;
+	margin: 8px 0;
+	border-bottom: 1px solid #efefef;
+}
+#theme-editor small {
+	display: block;
+	margin: 12px 0;
+	color: #ccc;
+	font-family: Sans-Serif;
+	font-size: 11px;
+	line-height: 16px;
+}
+	/* -- Color Picker -- */
+#theme-editor .sp-replacer {
+  margin: 0;
+  overflow: hidden;
+  padding: 4px;
+  border: none;
+  background:none;
+  color: #333;
+}
+#theme-editor .sp-preview {
+  width: 30px;
+  height: 30px;
+  border: none;
+  margin: 0;
+  background:none;
+}
+#theme-editor .sp-preview-inner {
+  border-radius: 100%;	
+    box-shadow: 0px 0px 5px rgba(0,0,0,.2);
+}
+#theme-editor .sp-dd {
+	display: none;
+}
+
+
+/*-- Flip --*/
+.flipcard {
+position: relative;
+  width: 150px;
+  height: 42px;
+  perspective: 500px;
+  margin: 3px 0;
+}
+.flipcard.v:hover .front, .flipcard.v.flip .front{
+  transform: rotateX(180deg);
+}
+.flipcard.v:hover .back, .flipcard.v.flip .back{
+  transform: rotateX(0deg);
+}
+.flipcard.v .back{
+  transform: rotateX(-180deg);
+}
+.flipcard.h:hover .front, .flipcard.h.flip .front{
+  transform: rotateY(180deg);
+}
+.flipcard.h:hover .back, .flipcard.h.flip .back{
+  transform: rotateY(0deg);
+}
+.flipcard.h .back{
+  transform: rotateY(-180deg);
+}
+.flipcard .front {
+  padding: 7px 10px;
+}
+
+
+.flipcard .front, .flipcard .back
+{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  transition: all 0.4s;
+  color: #ccc;
+  background-color: #444;
+  backface-visibility: hidden;
+}
+/* -- Colors -- */
+.flipcard .back ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.flipcard .back ul li {
+	display: inline-block;
+	width:33.33333%;
+	height: 42px;
+	padding: 0;margin: 0;
+}
+
+/* -- Active state -- */
+.flipcard.pActive .front {
+  background-color: #1582A5;
+  box-shadow: 0 0 3px rgba(0,0,0,.3);
+  /*border: 3px solid #Ccc;*/
+  /*padding: 4px 7px;*/
+}
+.flipcard.pActive .back li {
+	/*height: 36px;*/
+}
+.flipcard.pActive .back {
+  /*border: 3px solid #Ccc;*/
+
+
+}

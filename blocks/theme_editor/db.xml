@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+    <table name="btThemeEditor">
+        <field name="bID" type="I"><KEY/><UNSIGNED/></field>
+        <field name="options" type="X"></field>
+    </table>
+</schema>
